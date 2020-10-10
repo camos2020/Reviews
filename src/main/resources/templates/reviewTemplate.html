@@ -18,13 +18,26 @@
     </ul>
     </h2>
     <div class="date__container">
-        <h3 class="date__headline">Date of product review ----:  **</h3>
-        <p th:text="${reviewModel.date}"></p>
+        <h3 class="date__headline">Date of product review:</h3>
+        <p id="Review-info1" th:text="${reviewModel.date}"></p>
     </div>
-    <h3 th:text="'Product category-----------:  **' +${reviewModel.reviewCategory}"></h3>
-    <h3 th:text="'Overall product rating-----:  **' +${reviewModel.reviewRating}"></h3>
-    <h3 th:text="'Product review-------------:  **' +${reviewModel.reviewContent}"></h3>
-    <img th:src="${reviewModel.pics}"/>
+
+    <div class="category__container">
+        <h3 class="category">Product category:</h3>
+        <p id="Review-info2" th:text="${reviewModel.reviewCategory}"></p>
+    </div>
+
+    <div class="rating__container">
+        <h3 class="category">Overall product rating:</h3>
+        <p id="Review-info3" th:text= "${reviewModel.reviewRating}"></p>
+    </div>
+
+    <div class="product-review__container">
+        <h3 class="category">Product review:</h3>
+        <p id="Review-info4" th:text="${reviewModel.reviewContent}"></p>
+    </div>
+
+       <img th:src="${reviewModel.pics}"/>
 
 </main>
 
